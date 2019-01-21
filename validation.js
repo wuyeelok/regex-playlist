@@ -15,7 +15,13 @@ const setInputFieldBorderColor = (inputFieldEle, regex) => {
 }
 
 
-// username
+//  username
 const usernameEle = document.getElementsByName("username")[0]
 const usernameRegex = /^[\w]{5,12}$/i
 setInputFieldBorderColor(usernameEle, usernameRegex)
+
+
+//  telephone
+const telephoneEle = document.getElementsByName("telephone")[0]
+const telephoneRegex = /^[\d]{11}$/
+setInputFieldBorderColor(telephoneEle, telephoneRegex)
