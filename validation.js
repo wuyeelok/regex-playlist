@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll("input")
 const patterns = {
     username: /^[a-z\d]{5,12}$/i,
     email: /^[\w]+@[\w]+.com$/i,
-    password: /^[a-z,0-9,@,_,-]{8,20}$/i,
+    password: /^[\w@-]{8,20}$/i,
     telephone: /^[\d]{11}$/,
     slug: /^[a-z,0-9,-]{8,20}$/
 }
