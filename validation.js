@@ -11,13 +11,18 @@ const patterns = {
 
 //  validation function
 const validate = (field, regex) => {
-    return regex.test(field.value)
+    if(regex.test(field.value)) {
+        field.classList.remove('invalid')
+        field.classList.add('valid')
+    } else {
+        field.classList.remove('valid')
+        field.classList.add('invalid')
+    }
 }
 
 inputs.forEach(input => {
     input.addEventListener('input', e => {
-        const borderColor = (validate(e.target, patterns[e.target.attributes.name.value])?"green":"red")
-        e.target.style.borderColor = borderColor
+        validate(e.target, patterns[e.target.attributes.name.value])
     })
 })
 
