@@ -23,10 +23,10 @@ input{
     outline: none !important;
 }
 
-.valid {
-    border-color: green;
+input.valid {
+    border-color: #36cc36;
 }
 
-.invalid {
+input.invalid {
     border-color: red;
 }
