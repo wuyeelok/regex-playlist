@@ -30,3 +30,16 @@ input.valid {
 input.invalid {
     border-color: red;
 }
+
+input + p {
+    text-align: center;
+    color: red;
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid + p {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
+}
